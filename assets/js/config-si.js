@@ -7,7 +7,7 @@ var config = {
     use3dTerrain: false,
     chapters: [
         {
-            id: 'slug-style-id',
+            id: 'si-one',
             alignment: 'left',
             hidden: false,
             title: 'Crashes are definitively caused by speeding',
@@ -36,7 +36,7 @@ var config = {
             ]
         },
         {
-            id: 'other-identifier',
+            id: 'si-two',
             alignment: 'right',
             hidden: false,
             title: 'Transit cannot succeed in a pedestrian-hostile environment',

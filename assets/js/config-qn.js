@@ -7,7 +7,7 @@ var config = {
     use3dTerrain: false,
     chapters: [
         {
-            id: 'slug-style-id',
+            id: 'qn-one',
             alignment: 'left',
             hidden: false,
             title: 'Prioritize vulnerable pedestrians at points of crossing',
@@ -36,7 +36,7 @@ var config = {
             ]
         },
         {
-            id: 'other-identifier',
+            id: 'qn-two',
             alignment: 'right',
             hidden: false,
             title: 'A center-running mall is space for people, not parking',
@@ -54,7 +54,7 @@ var config = {
             onChapterExit: []
         },
         {
-            id: 'slug-style-id',
+            id: 'qn-three',
             alignment: 'left',
             hidden: false,
             title: 'A boulevard, not a freeway',

@@ -7,7 +7,7 @@ var config = {
     use3dTerrain: false,
     chapters: [
         {
-            id: 'slug-style-id',
+            id: 'bk-one',
             alignment: 'left',
             hidden: false,
             title: '12 fatal crashes in 2021 alone',
@@ -36,7 +36,7 @@ var config = {
             ]
         },
         {
-            id: 'other-identifier',
+            id: 'bk-two',
             alignment: 'right',
             hidden: false,
             title: '69% of households within walking distance of Atlantic Avenue do not own a car',
@@ -54,7 +54,7 @@ var config = {
             onChapterExit: []
         },
         {
-            id: 'slug-style-id',
+            id: 'bk-three',
             alignment: 'left',
             hidden: false,
             title: 'A Vision Zero Priority Area',
@@ -83,7 +83,7 @@ var config = {
             ]
         },
         {
-            id: 'slug-style-id',
+            id: 'bk-four',
             alignment: 'right',
             hidden: false,
             title: 'Car-centric infrastructure leads to negative externalities',

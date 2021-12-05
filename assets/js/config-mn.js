@@ -7,7 +7,7 @@ var config = {
     use3dTerrain: false,
     chapters: [
         {
-            id: 'slug-style-id',
+            id: 'mn-one',
             alignment: 'left',
             hidden: false,
             title: 'A multimodal cross-town corridor, from river to river',
@@ -36,8 +36,8 @@ var config = {
             ]
         },
         {
-            id: 'slug-style-id',
-            alignment: 'left',
+            id: 'mn-two',
+            alignment: 'right',
             hidden: false,
             title: 'Tree cover as a strategy for increasing equity',
             description: 'The spatial inequity of 125th Street also affects street trees, which live in <a href="https://www.google.com/maps/place/5th+Ave+%26+W+125th+St,+New+York,+NY+10027/@40.8075161,-73.9449288,3a,75y,203.47h,75.27t/data=!3m6!1e1!3m4!1s68qqKegowpNmxSGNCQ_K3Q!2e0!7i16384!8i8192!4m5!3m4!1s0x89c2f60c8401b2df:0x4e6ed18741df6677!8m2!3d40.8064194!4d-73.9422689" target="_blank">notably small tree pits</a> along this stretch, resulting in a lower survival rate and smaller canopies, less effective at cooling the air. Tree coverage is as low as 10 percent of open space, a third of what it is in the nearby Upper West Side.',
@@ -65,7 +65,7 @@ var config = {
             ]
         },
         {
-            id: 'other-identifier',
+            id: 'mn-three',
             alignment: 'right',
             hidden: false,
             title: 'Buses are blocked, despite a bus-only lane',

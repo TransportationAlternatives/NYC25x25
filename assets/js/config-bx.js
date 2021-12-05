@@ -7,7 +7,7 @@ var config = {
     use3dTerrain: false,
     chapters: [
         {
-            id: 'slug-style-id',
+            id: 'bx-one',
             alignment: 'left',
             hidden: false,
             title: 'A huge opportunity for transit',
@@ -36,7 +36,7 @@ var config = {
             ]
         },
         {
-            id: 'other-identifier',
+            id: 'bx-two',
             alignment: 'right',
             hidden: false,
             title: 'Expanding public space improvements',
@@ -54,7 +54,7 @@ var config = {
             onChapterExit: []
         },
         {
-            id: 'slug-style-id',
+            id: 'bx-three',
             alignment: 'left',
             hidden: false,
             title: 'Designing for seniors and children, our most vulnerable street users',
