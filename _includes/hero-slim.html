@@ -1,0 +1,16 @@
+<div style="background-color: #fff">
+    <img src="{{page.hero}}" style="width: 100%; height: 50vh; object-fit: cover; filter: brightness(50%); border: none; ">
+  <div class="image-2">
+    <div class="container" style="position: absolute;  top: 40%; left: 50%; transform: translate(-50%, -50%); color: white;">
+      <div class="main-hero d-flex justify-content-center align-items-center">
+        <div class="col-md-10">
+          <h1 style="padding-bottom: 16px;" >{{page.title}}</h1>
+          <h3 style="padding-bottom: 16px;">{{page.subhead}}</h3>
+          {% if page.btn %}
+            <a href="{{page.btn-link}}" target="_blank"><button class="btn btn-success btn-lg" type="button">{{page.btn}}</button></a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

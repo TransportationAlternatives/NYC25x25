@@ -1,0 +1,617 @@
+<!--scroll.html-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- META -->
+    <meta charset="utf-8">
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
+    <title>Jerome Avenue, The Bronx | NYC 25x25 | Transportation Alternatives</title>
+    
+    <!-- GLOBAL CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/style.css">
+
+    <!-- FONTS -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
+
+    <!-- FAVICON -->
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+    <link rel="manifest" href="/assets/images/site.webmanifest">
+    <link rel="mask-icon" href="/assets/images/safari-pinned-tab.svg" color="#f15d22">
+    <link rel="shortcut icon" href="/assets/images/favicon.ico">
+    <meta name="msapplication-TileColor" content="#f15d22">
+    <meta name="msapplication-config" content="/assets/images/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- SOCIAL META -->
+
+    <meta property="og:title" content="Jerome Avenue, The Bronx | NYC 25x25" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://nyc25x25.org" />
+    <meta property="og:description" content="A Challenge to Give Streets Back to People">
+    <meta property="og:image" content="/assets/images/home/25.jpg" />
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@transalt">
+    <meta name="twitter:title" content="Jerome Avenue, The Bronx | NYC 25x25">
+    <meta name="twitter:description" content="A challenge to New York City's next leaders to give streets back to people.">
+    <meta name="twitter:image" content="/assets/images/home/25.jpg">
+
+        <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.css' rel='stylesheet' />
+    <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+    <script src="https://unpkg.com/scrollama"></script>
+    <style>
+        body {
+            font-family: 'Montserrat', system-ui, sans-serif, serif;
+        }
+        a, a:hover, a:visited {
+            color: #0071bc;
+        }
+        #map {
+            top:0;
+            height: 100vh;
+            width:100%;
+            position: sticky;
+        }
+        #header {
+            margin: auto;
+            width: 100%;
+            position: relative;
+        }
+        #header h1, #header h2, #header p {
+            margin: 0;
+            padding: 2vh 2vw;
+            text-align: center;
+        }
+        #footer {
+            width: 100%;
+            min-height: 5vh;
+            padding-top: 2vh;
+            padding-bottom: 2vh;
+            text-align: center;
+            line-height: 25px;
+            font-size: 13px;
+            position: relative;
+            z-index: 5;
+        }
+        #features {
+            padding-top: 10vh;
+            padding-bottom: 10vh;
+        }
+        .hidden {
+            visibility: hidden;
+        }
+        .centered {
+            width: 50vw;
+            margin: 0 auto;
+        }
+        .lefty {
+            width: 33vw;
+            margin-left: 5vw;
+        }
+        .righty {
+            width: 33vw;
+            margin-left: 62vw;
+        }
+        .fully {
+            width: 100%;
+            margin: auto;
+        }
+        .light {
+            color: #414042;
+            background-color: #fafafa;
+        }
+        .dark {
+            color: #fafafa;
+            background-color: #444;
+        }
+        .step {
+            padding-bottom: 50vh;
+            /* margin-bottom: 10vh; */
+            opacity: 0.25;
+            position: relative;
+            position: -webkit-relative;
+        }
+        .step.active {
+            z-index: 10000;
+            opacity: 0.9;
+        }
+
+        .step div {
+            padding-bottom:  1.5em;
+            padding-left: 2em;
+            padding-right: 2em;
+            padding-top: 2em;
+            line-height: 25px;
+            font-size: 13px;
+            z-index: 1000;
+        }
+
+        .step img {
+            width: 100%;
+        }
+
+        @media (max-width: 750px) {
+            .centered, .lefty, .righty, .fully {
+                width: 90vw;
+                margin: 0 auto;
+            }
+        }
+
+        /* Fix issue on mobile browser where scroll breaks  */
+        .mapboxgl-canvas-container.mapboxgl-touch-zoom-rotate.mapboxgl-touch-drag-pan, 
+        .mapboxgl-canvas-container.mapboxgl-touch-zoom-rotate.mapboxgl-touch-drag-pan .mapboxgl-canvas {
+            touch-action: unset;
+        }
+
+        html {
+            scroll-behavior: smooth !important;
+        }
+
+        @media screen and (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+	<header style="z-index: 10">
+	<div class="header" id="top" style="z-index:">
+      	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	        <div class="container-fluid">
+	          <a class="navbar-brand" href="/" target="_self">
+	            <img src="/assets/images/25.svg" alt="25x25 logo" height="48px" class="d-inline-block align-text-top" style="margin-right: 8px;"></a>
+	          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+	            <span class="navbar-toggler-icon"></span>
+	          </button>
+	          <div class="collapse navbar-collapse" id="navbarText" style="z-index: 99999; background-color: white">
+	            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+	              <li class="nav-item">
+	                <a class="nav-link" target="_self" href="/25x25report.html"><span class="nav-link-border">Report</span></a>
+	              </li>
+	              <li class="nav-item">
+	                <a class="nav-link" target="_self" href="/faq.html"><span class="nav-link-border">FAQ</span></a>
+	              </li>
+	              <li class="nav-item">
+	                <a class="nav-link" target="_self" href="/coalition.html"><span class="nav-link-border">Coalition</span></a>
+	              </li>
+	              <li class="nav-item">
+	                <a class="nav-link" target="_self" href="/illustrated.html"><span class="nav-link-border">Illustrated</span></a>
+	              </li>
+	              <li class="nav-item">
+	                <a class="nav-link" target="_self" href="/streets-remix.html"><span class="nav-link-border">25x25 Streets</span></a>
+	              </li>
+	            </ul>
+	            <a href="https://support.transalt.org/give/327420/#!/donation/checkout" target="_blank"><button type="button" class="btn btn-primary header-btn">Donate</button></a>
+	            <a href="/coalition.html" target="_self"><button type="button" class="btn btn-primary header-btn" style="margin-left: 5px;">Join us</button></a>
+	          </div>
+	        </div>
+      	</nav>
+    </div>
+</header>
+    <div style="background-color: #f15d22">
+    <img src="https://github.com/jacobdecastro/25x25/blob/main/assets/images/IMG_6054.JPG?raw=true" style="width: 100%; height: 60vh; object-fit: cover; filter: brightness(65%); border: none; ">
+  <div class="image-2">
+    <div class="container" style="position: absolute;  top: 45%; left: 50%; transform: translate(-50%, -50%); color: white;">
+      <div class="main-hero d-flex justify-content-center align-items-center">
+        <div class="col-md-10">
+          <h1 style="padding-bottom: 16px;" >Jerome Avenue, The Bronx</h1>
+          <h3 style="padding-bottom: 16px;"></h3>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <nav class="navbar navbar-expand-lg navbar-light border-bottom sticky-top" style="float: none; text-align: center; margin: 0 auto; display: block; background-color: rgba(255,255,255,.95); z-index: 100000; padding-top: 0; padding-bottom: 0; height: ">
+    <button class="navbar-toggler" type="menu" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="border: none; padding-top: 2%; padding-bottom: 2%; font-family: 'Montserrat', system-ui, sans-serif; color: #414042">
+      <em>25x25</em> Streets Menu
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link py-0" target="_self" href="/streets-remix.html"><span class="secondaryNav" style="color: #f15d22; font-weight: 700">25x25 STREETS</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link py-0" target="_self" href="/brooklyn.html"><span class="nav-link-border secondaryNav">Brooklyn</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link py-0" target="_self" href="/bronx.html"><span class="nav-link-border secondaryNav">The Bronx</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link py-0" target="_self" href="/manhattan.html"><span class="nav-link-border secondaryNav">Manhattan</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link py-0" target="_self" href="/queens.html"><span class="nav-link-border secondaryNav">Queens</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link py-0" target="_self" href="/statenisland.html"><span class="nav-link-border secondaryNav">Staten Island</span></a>
+        </li>
+        <!-- <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Site studies
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="nav-link dropdown-item" href="#">Atlantic Avenue, Brooklyn</a></li>
+            <li><a class="nav-link dropdown-item" href="#">Jerome Avenue, the Bronx</a></li>
+            <li><a class="nav-link dropdown-item" href="#">125th St, Manhattan</a></li>
+            <li><a class="nav-link dropdown-item" href="#">Northern Boulevard, Queens</a></li>
+            <li><a class="nav-link dropdown-item" href="#">Hylan Boulevard, Staten Island</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/streets-Methodology.html"><span class="nav-link-border">Methodology</span></a>
+        </li> -->
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="p1-body reportStyle" style="padding-bottom: 2.5em;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 reportStyle">
+                <h3>Jerome Avenue is a vital Bronx thoroughfare and 167th Street and Edward L. Grant Highway are key crosstown connectors.</h3>
+                <p><strong>Why we chose this site:</strong> Everyday, 22,000 daily transit riders on the <a target="_blank" href="https://www1.nyc.gov/html/brt/downloads/pdf/bx-cb4-projects-feb052020.pdf">Bx35</a> cross this intersection to connect to three subway lines or eight other bus routes, but often move at a snail&rsquo;s pace mired in constant congestion. Other critical issues here include frequent double parking and loading, and high asthma rates due to air pollution.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div> 
+
+<div>
+    <div id="map"></div>
+    <div id="story"></div>
+</div>
+
+<div class="p1-body reportStyle">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 reportStyle">
+                <h2>&#128161; We say: It doesn't have to be this way</h2>
+                <p>Jerome Avenue at 167th Street is reimagined so that it prioritizes safety and sustainable modes. The new green public space counters the existing higher-than-average air pollution, asthma rates, flooding, surface-level summer temperatures, and fatal traffic crashes.</p>
+            </div>
+        </div>
+    </div>
+    <div class=" imgbreak" style="width: 100%; overflow-x: hidden;">
+        <div class="row d-flex justify-content-center">
+            <div class="">
+                <script src="https://fast.wistia.com/embed/medias/xxmhxla07j.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_xxmhxla07j videoFoam=true" style="height:100%;position:relative;width:100%">&nbsp;</div></div></div>
+            </div>
+        </div>
+    </div>
+    <div class="container" style="padding-bottom: 24px;">
+        <div class="row justify-content-center">
+            <div class="col-md-8 reportStyle">
+                <h3>&#128227; Actionable design recommendations</h3>
+                <p>Based on the needs and problems that we heard from Transportation Alternatives members in the Bronx, here are the top three implementation-focused strategies we recommend for this site &mdash; explored above in the video and below in more detail.</p>
+                <div class="d-flex justify-content-center" style="padding-top: 16px; padding-bottom: 16px;">
+                    <a href="#" target="_blank"><button class="btn btn-primary" style="margin-right: 8px; margin-bottom: 8px;">View interactive designs</button></a>
+                     <a href="#" target="_blank"><button class="btn btn-secondary">View public comments</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- design rec 1 -->
+    <section style="overflow-x: hidden;">
+        <div class="row no-gutters " style="">
+            <div class="col-md-7" style="background-image: url(https://github.com/jacobdecastro/25x25/blob/main/assets/images/redesign/Bronx%20redesign%201.png?raw=true); background-size: cover; background-position: bottom;">
+                <img src="https://github.com/jacobdecastro/25x25/blob/main/assets/images/redesign/Bronx%20redesign%201.png?raw=true" width="100%" class="d-lg-none d-xl-none d-md-none" alt="rendering of a car-free safe route to school">
+            </div>
+            <div class="col-md-5" class="orangebg" style="padding: 3%; background-color: #f15d22; color: white">
+                <div class="proposaltext" class="orangebg">
+                    <h3 style="">1. Car-free safe routes to school</h3>
+                    <p>School streets are an integral part of Safe Routes to School. The City can prioritize the health, safety, and wellbeing of children, parents, teachers and school staff by creating a car-free space outside their school. Being struck by a car is the leading cause of injury-related death for children under 14, and 75 percent of New York’s school-aged children are not driven to school. Designate Cromwell as School Bus Only and create a School Bus Drop Off location on Jerome.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- design rec 2 -->
+    <section style="overflow-x: hidden; padding-top: 4%">
+        <div class="row no-gutters " style="">
+            <div class="col-md-5 order-sm-12" class="orangebg" style="padding: 3%; background-color: #ffc20e; color: #414042">
+                <div class="proposaltext" class="orangebg">
+                    <h3 style="">2. A better busway</h3>
+                    <p>East 167th Street is an especially vital east-west corridor for bus riders and cyclists in the Bronx. On this block, the MTA reports a bus speed average of 5mph, and the bike lane is usually filled with parked vehicles. This redesign improves on the Manhattan’s 14th Street busway model, prioritizing and encouraging the use of sustainable modes while maintaining truck access to local businesses.</p>
+                </div>
+            </div>
+            <div class="col-md-7 order-sm-1" style="background-image: url(https://github.com/jacobdecastro/25x25/blob/main/assets/images/redesign/Bronx%20redesign%202.png?raw=true); background-size: cover; background-position: center;">
+                <img src="https://github.com/jacobdecastro/25x25/blob/main/assets/images/redesign/Bronx%20redesign%202.png?raw=true" width="100%" class="d-lg-none d-xl-none" alt="rendering of a road for buses and deliveries only">
+            </div>
+        </div>
+    </section>
+    <!-- design rec 3 -->
+    <section style="overflow-x: hidden; padding-top: 4%">
+        <div class="row no-gutters " style="">
+            <div class="col-md-7" style="background-image: url(https://github.com/jacobdecastro/25x25/blob/main/assets/images/redesign/Bronx%20redesign%203.png?raw=true); background-size: cover; background-position: bottom;">
+                <img src="https://github.com/jacobdecastro/25x25/blob/main/assets/images/redesign/Bronx%20redesign%203.png?raw=true" width="100%" class="d-lg-none d-xl-none" alt="rendering of trees and bike lane on jerome">
+            </div>
+            <div class="col-md-5" class="orangebg" style="padding: 3%; background-color: #3e6f20; color: white">
+                <div class="proposaltext" class="orangebg">
+                    <h3 style="">3. Trees and bioswales for resilience</h3>
+                    <p>This neighborhood, which is in a Vision Zero Priority Area for its high number of crashes, also has few trees, sees asthma-induced hospitalizations four times more than the citywide average, and is prone to flooding. By simplifying the intersection and expanding space for greenery, this redesign centers health and safety. Simplify the intersection and create a pedestrian plaza with trees, bioswales, seating, and parking for bikes and micromobility.</p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- links -->
+    <div class="container">
+      <div class="row justify-content-center">
+            <div class="col-md-8 reportStyle">
+                <section class="" style="margin-top: 3em;">
+	<div class="card border-secondary mb-3" style="border: ">
+		<div class="card-body" style="padding: 2em">
+	    	<h5 class="card-title" style="text-align:"><strong>If you believe in this future for New York City, join TA today.</strong></h5>
+	    	<p style="font-family: 'Montserrat', system-ui, sans-serif;">Your donation enables TA to harness the power of the grassroots to make our streets safer, more livable, and more vibrant for all New Yorkers.</p>
+	    	<a href="https://support.transalt.org/give/327420/#!/donation/checkout" class="" style="margin: 0 auto" target="_blank"><button class="btn btn-primary">Donate</button></a>
+		</div>
+	</div>
+</section>
+               <div class="reportbtn d-flex justify-content-between">
+                    <a href="/brooklyn.html" target="_self"><button type="button" class="btn btn-outline-secondary"><i class="bi bi-chevron-left"></i> Brooklyn </button></a>
+                    <a href="#top" target="_self"><button type="button" class="btn btn-outline-secondary">Back to top</button></a>
+                    <a href="/manhattan.html" target="_self"><button type="button" class="btn btn-outline-secondary">Manhattan <i class="bi bi-chevron-right"></i></button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+	<div class="border-top footer">
+    <div class="container-fluid">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center" style="padding-top: 2em; padding-bottom: 2em; padding-left: .5em; padding-right: .5em">
+        <div class="col-md-4 d-flex align-items-center">
+          <a href="https://transalt.org" target="_blank" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+            <img class="bi" height="60px" src="/assets/images/ta-logo.svg">
+          </a>
+        </div>
+            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+              <li class="ms-3"><a class="text-muted" href="https://twitter.com/transalt" target="_blank"><i class="bi bi-twitter"></i></a></li>
+              <li class="ms-3"><a class="text-muted" href="https://instagram.com/transportationalternatives" target="_blank"><i class="bi bi-instagram"></i></a></li>
+              <li class="ms-3"><a class="text-muted" href="https://facebook.com/transportationalternatives" target="_blank"><i class="bi bi-facebook"></i></a></li>
+            </ul>
+          </footer>
+        </div>
+      </div>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    
+    
+
+    <script src="/assets/js/config-bx.js" type="text/javascript"></script>
+<script>
+var layerTypes = {
+    'fill': ['fill-opacity'],
+    'line': ['line-opacity'],
+    'circle': ['circle-opacity', 'circle-stroke-opacity'],
+    'symbol': ['icon-opacity', 'text-opacity'],
+    'raster': ['raster-opacity'],
+    'fill-extrusion': ['fill-extrusion-opacity'],
+    'heatmap': ['heatmap-opacity']
+}
+
+var alignments = {
+    'left': 'lefty',
+    'center': 'centered',
+    'right': 'righty',
+    'full': 'fully'
+}
+
+function getLayerPaintType(layer) {
+    var layerType = map.getLayer(layer).type;
+    return layerTypes[layerType];
+}
+
+function setLayerOpacity(layer) {
+    var paintProps = getLayerPaintType(layer.layer);
+    paintProps.forEach(function(prop) {
+        var options = {};
+        if (layer.duration) {
+            var transitionProp = prop + "-transition";
+            options = { "duration": layer.duration };
+            map.setPaintProperty(layer.layer, transitionProp, options);
+        }
+        map.setPaintProperty(layer.layer, prop, layer.opacity, options);
+    });
+}
+
+var story = document.getElementById('story');
+var features = document.createElement('div');
+features.setAttribute('id', 'features');
+
+var header = document.createElement('div');
+
+if (config.title) {
+    var titleText = document.createElement('h1');
+    titleText.innerText = config.title;
+    header.appendChild(titleText);
+}
+
+if (config.subtitle) {
+    var subtitleText = document.createElement('h2');
+    subtitleText.innerText = config.subtitle;
+    header.appendChild(subtitleText);
+}
+
+if (config.byline) {
+    var bylineText = document.createElement('p');
+    bylineText.innerText = config.byline;
+    header.appendChild(bylineText);
+}
+
+if (header.innerText.length > 0) {
+    header.classList.add(config.theme);
+    header.setAttribute('id', 'header');
+    story.appendChild(header);
+}
+
+config.chapters.forEach((record, idx) => {
+    var container = document.createElement('div');
+    var chapter = document.createElement('div');
+
+    if (record.title) {
+        var title = document.createElement('h3');
+        title.innerText = record.title;
+        chapter.appendChild(title);
+    }
+
+    if (record.image) {
+        var image = new Image();
+        image.src = record.image;
+        chapter.appendChild(image);
+    }
+
+    if (record.description) {
+        var story = document.createElement('p');
+        story.innerHTML = record.description;
+        chapter.appendChild(story);
+    }
+
+    container.setAttribute('id', record.id);
+    container.classList.add('step');
+    if (idx === 0) {
+        container.classList.add('active');
+    }
+
+    chapter.classList.add(config.theme);
+    container.appendChild(chapter);
+    container.classList.add(alignments[record.alignment] || 'centered');
+    if (record.hidden) {
+        container.classList.add('hidden');
+    }
+    features.appendChild(container);
+});
+
+story.appendChild(features);
+
+var footer = document.createElement('div');
+
+if (config.footer) {
+    var footerText = document.createElement('p');
+    footerText.innerHTML = config.footer;
+    footer.appendChild(footerText);
+}
+
+if (footer.innerText.length > 0) {
+    footer.classList.add(config.theme);
+    footer.setAttribute('id', 'footer');
+    story.appendChild(footer);
+}
+
+mapboxgl.accessToken = config.accessToken;
+
+const transformRequest = (url) => {
+    const hasQuery = url.indexOf("?") !== -1;
+    const suffix = hasQuery ? "&pluginName=scrollytellingV2" : "?pluginName=scrollytellingV2";
+    return {
+      url: url + suffix
+    }
+}
+
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: config.style,
+    center: config.chapters[0].location.center,
+    zoom: config.chapters[0].location.zoom,
+    bearing: config.chapters[0].location.bearing,
+    pitch: config.chapters[0].location.pitch,
+    interactive: false,
+    transformRequest: transformRequest
+});
+
+if (config.showMarkers) {
+    var marker = new mapboxgl.Marker({ color: config.markerColor });
+    marker.setLngLat(config.chapters[0].location.center).addTo(map);
+}
+
+// instantiate the scrollama
+var scroller = scrollama();
+
+map.on("load", function() {
+    if (config.use3dTerrain) {
+        map.addSource('mapbox-dem', {
+            'type': 'raster-dem',
+            'url': 'mapbox://mapbox.mapbox-terrain-dem-v1',
+            'tileSize': 512,
+            'maxzoom': 14
+        });
+        // add the DEM source as a terrain layer with exaggerated height
+        map.setTerrain({ 'source': 'mapbox-dem', 'exaggeration': 1.5 });
+
+        // add a sky layer that will show when the map is highly pitched
+        map.addLayer({
+            'id': 'sky',
+            'type': 'sky',
+            'paint': {
+                'sky-type': 'atmosphere',
+                'sky-atmosphere-sun': [0.0, 0.0],
+                'sky-atmosphere-sun-intensity': 15
+            }
+        });
+    };
+
+    // setup the instance, pass callback functions
+    scroller
+    .setup({
+        step: '.step',
+        offset: 0.5,
+        progress: true
+    })
+    .onStepEnter(response => {
+        var chapter = config.chapters.find(chap => chap.id === response.element.id);
+        response.element.classList.add('active');
+        map[chapter.mapAnimation || 'flyTo'](chapter.location);
+        if (config.showMarkers) {
+            marker.setLngLat(chapter.location.center);
+        }
+        if (chapter.onChapterEnter.length > 0) {
+            chapter.onChapterEnter.forEach(setLayerOpacity);
+        }
+        if (chapter.callback) {
+            window[chapter.callback]();
+        }
+        if (chapter.rotateAnimation) {
+            map.once('moveend', function() {
+                const rotateNumber = map.getBearing();
+                map.rotateTo(rotateNumber + 90, {
+                    duration: 24000, easing: function (t) {
+                        return t;
+                    }
+                });
+            });
+        }
+    })
+    .onStepExit(response => {
+        var chapter = config.chapters.find(chap => chap.id === response.element.id);
+        response.element.classList.remove('active');
+        if (chapter.onChapterExit.length > 0) {
+            chapter.onChapterExit.forEach(setLayerOpacity);
+        }
+    });
+});
+
+// setup resize event
+window.addEventListener('resize', scroller.resize);
+
+</script>
+</body>
+</html>
