@@ -16,6 +16,10 @@ p.nyc-map-label {
 	font-family: 'Montserrat', system-ui, sans-serif;
 }
 
+.hometext p {
+	letter-spacing: -0.1px;
+}
+
 form label {
 	font-family: 'Montserrat', system-ui, sans-serif;
 	font-size: 18px;
@@ -99,7 +103,6 @@ form input {
 .btn-outline-primary {
 	border-color: white;
 	color: white;
-	border:;
 	background-color: rgba(255,255,255,0.2);
 }
 
@@ -251,9 +254,6 @@ img:not([src]) {
 }
 
 @media (min-width: 768px) {
-	.shovelhero {
-		background-color: ;
-	}
 	.shoveltext {
 		padding: 0;
 		padding: 2em;
@@ -300,12 +300,6 @@ h3 a:hover {
 	.proposaltext {
 		padding-left: 12px;
 		padding-right: 12px;
-}
-
-@media (min-width: 768px) {
-	.proposaltext {
-		
-	}
 }
 
 .orangebg {
