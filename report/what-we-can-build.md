@@ -45,16 +45,18 @@ These improvements could be located where they have the greatest possible benefi
 
 Repurposing car space for better use is not just beneficial for New Yorkers — it’s broadly popular among New York City voters in every borough, and of every age, race, and income demographic. In a [recent Siena College Research Institute poll](https://www.transalt.org/press-releases/poll-majority-of-voters-support-adding-protected-bike-lanes-bus-lanes-in-their-neighborhood-near-universal-support-for-expanding-crosswalks-green-spaces-even-if-it-results-in-less-parking) of registered New York City voters commissioned by Transportation Alternatives, **every one of these amenities remained extremely popular, even if they would mean less street parking space**.
 
-- 85 percent wanted safer crosswalks
-- 84 percent wanted more space for children to play
-- 83 percent wanted more trees and greenery
-- 75 percent wanted more benches and other seating on the street
-- 68 percent supported adding more protected bike lanes to their neighborhoods
-- 64 percent supported outdoor restaurant seating
-- 63 percent supported expanding Open Streets
-- 58 percent wanted wider sidewalks
-- 56 percent supported bike share stations
-- 56 percent supported more citywide dedicated bus lanes.
+<ul>
+	<li class="list-no-space">85 percent wanted safer crosswalks</li>
+	<li class="list-no-space">84 percent wanted more space for children to play</li>
+	<li class="list-no-space">83 percent wanted more trees and greenery</li>
+	<li class="list-no-space">75 percent wanted more benches and other seating on the street</li>
+	<li class="list-no-space">68 percent supported adding more protected bike lanes to their neighborhoods</li>
+	<li class="list-no-space">64 percent supported outdoor restaurant seating</li>
+	<li class="list-no-space">63 percent supported expanding Open Streets</li>
+	<li class="list-no-space">58 percent wanted wider sidewalks</li>
+	<li class="list-no-space">56 percent supported bike share stations</li>
+	<li class="list-no-space">56 percent supported more citywide dedicated bus lanes.</li>
+</ul>
 
 ![Rotating text graphic highlighting the aforementoined overwhelming majority support of public amenitites even if they meant less street parking space. ](https://github.com/jacobdecastro/25x25/blob/main/assets/images/report/image33.gif?raw=true)
 
