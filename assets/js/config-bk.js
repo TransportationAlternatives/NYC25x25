@@ -10,7 +10,7 @@ var config = {
             id: 'bk-one',
             alignment: 'left',
             hidden: false,
-            title: '12 fatal crashes in 2021 alone',
+            title: '10 fatal crashes in 2021 alone',
             description: 'In the last 5 years, there have also been 75 reported injuries at Flatbush and Atlantic Avenue, ranking this site as one of the top 20% of most dangerous intersections in the city.<br><br><em>&ldquo;Terrifying. I ride on the sidewalk if absolutely necessary. I avoid walking along here because it is so unpleasant as well. Atlantic is terrible.&rdquo; -Em<br><br>&ldquo;I avoid Atlantic at all costs. Feels the most dangerous on the northside as a pedestrian I feel like, because cars speed so fast on Atlantic and these streets are angled so they do not slow down when turning right.&rdquo; -Anonymous</em>',
             location: {
                 center: { lon: -73.97253, lat: 40.68255 },
