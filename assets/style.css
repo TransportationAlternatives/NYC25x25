@@ -1,13 +1,3 @@
-html {
-	scroll-behavior: smooth !important;
-}
-
-@media screen and (prefers-reduced-motion: reduce) {
-	html {
-		scroll-behavior: auto;
-	}
-}
-
 .wesay {
 	padding-bottom: 1.75em;
 }
@@ -243,10 +233,6 @@ a:hover {
 	border-radius: 0;
 }
 
-img:not([src]) {
-   visibility: hidden;
-}
-
 .imgbreak {
 	padding-top: 1.5em;
 	padding-bottom: 3em;
@@ -269,6 +255,9 @@ img:not([src]) {
 	.shoveltext {
 		padding-bottom: 2em;
 	}
+	#g-nyc-remix-Artboard_1 p {
+		font-size: 25px;
+	}
 }
 
 @media (min-width: 768px) {
@@ -276,6 +265,9 @@ img:not([src]) {
 		padding: 0;
 		padding: 2em;
 		margin-left: 2em;
+	}
+	#g-nyc-remix-Artboard_1 p {
+		font-size: 30px;
 	}
 }
 
@@ -318,6 +310,7 @@ h3 a:hover {
 	.proposaltext {
 		padding-left: 12px;
 		padding-right: 12px;
+	}
 }
 
 .orangebg {
