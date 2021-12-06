@@ -66,7 +66,7 @@ var config = {
         },
         {
             id: 'mn-three',
-            alignment: 'right',
+            alignment: 'left',
             hidden: false,
             title: 'Buses are blocked, despite a bus-only lane',
             description: 'Of the 60 public comments we received for 125th Street, nearly one-third mentioned that despite a dedicated bus lane, transit service is frustratingly unreliable due to cars and trucks double parking and violating the lane. This Community Board also ranks last among bus speed and reliability out of all 59 CBs in the city.<br><br><em>&ldquo;This bus lane is always blocked and becomes useless as busses have to merge into traffic. I sat on the M60 for an hour just to make it from Amsterdam to the MNR station.&rdquo; -Anonymous</em>',
