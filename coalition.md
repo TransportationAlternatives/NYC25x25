@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Demand more space for all New Yorkers
-subhead: Join 200+ local orgs and thousands of New Yorkers in demanding more space for all of us.
+subhead: Join 200+ local organizations and thousands of New Yorkers in demanding more space for all of us.
 hero: https://github.com/jacobdecastro/25x25/blob/main/assets/images/20210908TransAltStreets-81_EDITED.jpg?raw=true
 permalink: coalition
 
@@ -39,7 +39,7 @@ permalink: coalition
 
 _Individuals, organizations and/or businesses are welcome to join our NYC 25x25 coalition. Your name, email, and phone number will not be publicly listed or shared by TA._
 
-### By signing up to join our coalition, you are co-signing this letter to the future leaders of New York City.
+<h3 style="line-height: 1.45em">By signing up to join our coalition, you are co-signing this letter to the future leaders of New York City.</h3>
 
 **To those running for elected office in New York City,**
 
@@ -59,11 +59,13 @@ This better future will require a new approach from city officials and our futur
 
 Evidence of this, and the case for converting car space into space for people, is collected in Transportation Alternatives’ new report — NYC 25x25: A Challenge to New York City’s Next Leaders to Give Streets Back to People. As a coalition, we call on New York City’s next leaders to:
 
-- Recognize that the use of New York City’s streets is fundamentally inequitable;
-- Envision a more just and resilient approach to street management;
-- Agree to work with neighborhoods to create new public spaces that meet community needs; 
-- Speed our economic recovery by ensuring that our streets work for residents and businesses; and 
-- Reallocate 25 percent of car space to better use by 2025.
+<ul>
+	<li class="list-no-space">Recognize that the use of New York City’s streets is fundamentally inequitable;</li>
+	<li class="list-no-space">Envision a more just and resilient approach to street management;</li>
+	<li class="list-no-space">Agree to work with neighborhoods to create new public spaces that meet community needs;</li>
+	<li class="list-no-space">Speed our economic recovery by ensuring that our streets work for residents and businesses; and</li>
+	<li class="list-no-space">Reallocate 25 percent of car space to better use by 2025.</li>
+</ul>
 
 By meeting this challenge, New York City’s next leaders will take a bold first step to correct a historic inequality. In a moment of overlapping crises — health, social, economic, environmental — the question for our city’s future leaders is not whether we can be bold enough to shift course, but whether we can afford not to.
  
