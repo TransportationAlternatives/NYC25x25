@@ -40,7 +40,7 @@ var config = {
             alignment: 'right',
             hidden: false,
             title: 'Transit cannot succeed in a pedestrian-hostile environment',
-            description: 'Hyland Boulevard is also a critical bus route connecting Northern Staten Island, the Staten Island Railway, and the Staten Island Ferry. The public transit commuter rate in this area is 44% (high for SI), and one in six households do not own a car. Additionally, transit riders on SI have the longest commutes of any type of commuter in the city, at 75 minutes per trip average.',
+            description: 'Hyland Boulevard is also a critical bus route connecting the Staten Island Railway and the Staten Island Ferry. The public transit commuter rate in this area is 44% (high for SI), and one in six households do not own a car. Additionally, transit riders on SI have the longest commutes of any type of commuter in the city, at 75 minutes per trip average.',
             location: {
                 center: { lon: -74.10260, lat: 40.57761 },
                 zoom: 19.20,
