@@ -1,7 +1,7 @@
 ---
 layout: reportinner
 title: Evidence
-subhead: A better use of streets can boost the economy, clean the air, improve public safety, and increase public safety.
+subhead: A better use of streets can boost the economy, clean the air, and improve public safety.
 hero: https://raw.githubusercontent.com/jacobdecastro/25x25/main/assets/images/report/image25.jpg
 permalink: evidence
 
