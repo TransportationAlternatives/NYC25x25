@@ -6,5 +6,7 @@ permalink: search
 
 ---
 
+## Find what you're looking for
+
 <script async src="https://cse.google.com/cse.js?cx=25f71ef04f2c0540a"></script>
 <div class="gcse-search"></div>
