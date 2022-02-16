@@ -34,6 +34,14 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  
+title: NYC 25x25
+tagline: A Challenge to Give Streets Back to People
+description: If we convert 25% of car space into space for people, every New Yorker could live within a quarter-mile of a protected bus lane, protected bike lane, and public green space — and that’s just the start.
+twitter:
+  username: transalt
+  card: summary_large_image
+author: Transportation Alternatives
 
 # Exclude from processing.
 # The following items will not be processed, by default.
