@@ -9,14 +9,14 @@ permalink: 25x25report
 <a href="https://static1.squarespace.com/static/5cab9d9b65a707a9b36f4b6c/t/620d3583d7212b7bbc12d7c2/1645032844071/25x25_02.pdf" target="_blank"><button class="btn btn-success" type="button" style="margin-bottom: 1.5em"><i class="bi bi-file-earmark-arrow-down"></i> View report as PDF</button>
 
 
-## **_NYC 25x25_: A CHALLENGE TO NEW YORK CITY’S NEXT LEADERS TO GIVE STREETS BACK TO PEOPLE**
+## **_NYC 25x25_: A CHALLENGE TO NEW YORK CITY’S LEADERS TO GIVE STREETS BACK TO PEOPLE**
 
 
 Taken together, streets and sidewalks are New York City’s largest publicly owned space. Cars dominate that space. Despite the spatial abundance of 6,300 miles of asphalt and three million free parking spaces, New Yorkers’ everyday lives are relegated to narrow sidewalks and the margins of streets, where we are left to fight over the precious remaining scraps of our public space. 
 
 In the past two decades, elected officials have made little citywide progress in upending this wholesale car dominance — opting for disconnected and piecemeal improvements that fail to effectively manage our streets as a system of public spaces. For New Yorkers, the negative effects of a car-filled city remain. Asthma, heart disease, and preterm births rise with car pollution. Carbon emissions remain high and climate change threatens our future. New Yorkers risk life-altering injury and death crossing the street. Bus riders waste time on gridlocked streets. Burdensome commutes and a lack of transportation choices isolate communities from opportunity. 
 
-With a coalition of more than 80 unions, and economic, educational, environmental, disability rights, and public health organizations, Transportation Alternatives challenges New York City’s next leaders to end this vicious cycle by making a specific and substantial promise: to convert 25 percent of car space into space for people by 2025. 
+With a coalition of more than 80 unions, and economic, educational, environmental, disability rights, and public health organizations, Transportation Alternatives challenges New York City’s leaders to end this vicious cycle by making a specific and substantial promise: to convert 25 percent of car space into space for people by 2025. 
 
 Today, New York City faces a budget shortfall, a crisis of racial injustice, rising inequality and traffic violence, the loss of millions of jobs and small businesses, and the ongoing threat of climate change. Our recovery can begin, in part, by reimagining our largest public asset — New York City’s 6,300 miles of streets and three million free parking spaces — in support of the needs of all New Yorkers.
 
@@ -38,7 +38,7 @@ A better future will require a new management approach from city officials — o
 ![image info](https://github.com/jacobdecastro/25x25/blob/main/assets/images/report/image14.jpg?raw=true)
 *Source: Andrew Hinderaker*
 
-By converting a sizable and significant portion of car space into space for people, New York City's next leaders could be the first generation to address to inequitable distribution of space that has harmed New Yorkers for generations.
+By converting a sizable and significant portion of car space into space for people, New York City's leaders could be the first generation to address to inequitable distribution of space that has harmed New Yorkers for generations.
 
 Now is the time to take bold steps to correct a fundamental imbalance in our public space and who it serves — and give New Yorkers back our public space.
 
@@ -53,7 +53,7 @@ Changing our streets starts with setting our priorities. If our streets are publ
 
 City streets are rich with the potential to serve the public good and improve the lives of all New Yorkers — if only that space were not devoted to the movement and storage of cars owned by a minority of New Yorkers. 
 
-By repurposing 25 percent of current driving and parking space, the future leaders of New York City could create more than 13 Central Parks — or 12 Flushing Meadows-Corona Parks or 21 Prospect Parks or six Staten Island Greenbelts or 11 Van Cortlandt Parks — worth of new space by 2025. With that space, the next leaders of New York City could:
+By repurposing 25 percent of current driving and parking space, the future leaders of New York City could create more than 13 Central Parks — or 12 Flushing Meadows-Corona Parks or 21 Prospect Parks or six Staten Island Greenbelts or 11 Van Cortlandt Parks — worth of new space by 2025. With that space, the leaders of New York City could:
 
 - **Expand Transportation Options and Park Access.** Ensure that every New Yorker lives within a five-minute walk of a car-free protected bus lane, and within a quarter-mile of a protected bike lane, and within a five-minute walk of public green space, and within a block of a bike parking space, and within the access area of a newly citywide Citi Bike bike share system.
 - **Give Power Over Public Space Back to Communities.** Allow communities across New York City to decide the best possible alternatives for streets in their neighborhoods.
