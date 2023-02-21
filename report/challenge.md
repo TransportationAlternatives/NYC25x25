@@ -6,7 +6,7 @@ permalink: 25x25report
 
 ---
 
-<a href="[https://static1.squarespace.com/static/5cab9d9b65a707a9b36f4b6c/t/604943c930774078b5ceab66/1615414229606/NYC+25x25.pdf](https://drive.google.com/file/d/1Db8epdZzwe9fuxdvOtpihwcS3V3QLXZw/view?usp=sharing)" target="_blank"><button class="btn btn-success" type="button" style="margin-bottom: 1.5em"><i class="bi bi-file-earmark-arrow-down"></i> View report as PDF</button>
+<a href="https://drive.google.com/file/d/1Db8epdZzwe9fuxdvOtpihwcS3V3QLXZw/view?usp=sharing" target="_blank"><button class="btn btn-success" type="button" style="margin-bottom: 1.5em"><i class="bi bi-file-earmark-arrow-down"></i> View report as PDF</button>
 
 
 ## **_NYC 25x25_: A CHALLENGE TO NEW YORK CITY’S LEADERS TO GIVE STREETS BACK TO PEOPLE**
