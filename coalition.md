@@ -9,37 +9,7 @@ permalink: coalition
 
 ## JOIN OUR COALITION TO DEMAND MORE SPACE FOR ALL NEW YORKERS
 
-<form style="padding-bottom: 2em" action="https://hooks.zapier.com/hooks/catch/372105/opnetk3/" method="post" enctype="multipart/form-data">
-	<div class="mb-3">
-	  <label for="formGroupExampleInput" class="form-label">Organization name</label>
-	  <input type="text" class="form-control" name="organization-name" id="organization-name" placeholder="Optional">
-	</div>
-	<div class="mb-3">
-	  <label for="formGroupExampleInput" class="form-label">Your name</label>
-	  <input type="text" class="form-control" name="your-name" required id="your-name" placeholder="">
-	</div>
-  <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="email" class="form-control" name="email" id="email" required aria-describedby="emailHelp">
-  </div>
-  <div class="mb-3">
-	  <label for="formGroupExampleInput" class="form-label">Job title</label>
-	  <input type="text" class="form-control" name="job-title" id="job-title" placeholder="Optional">
-	</div>
-	<div class="mb-3">
-	  <label for="formGroupExampleInput" class="form-label">Phone number</label>
-	  <input type="tel" class="form-control" name="phone-number" id="phone-number" placeholder="Optional">
-	</div>
-  <div class="mb-3 form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" name="Yes-for-exampleCheck1" required>Yes, my organization wants to join the <em>NYC 25x25</em> coalition!</label>
-  </div>
-  <button type="submit" class="btn btn-primary btn-lg" id="submityes">Submit</button>
-</form>
-
-_Individuals, organizations and/or businesses are welcome to join our NYC 25x25 coalition. Your name, email, and phone number will not be publicly listed or shared by TA._
-
-<h3 style="line-height: 1.45em">By signing up to join our coalition, you are co-signing this letter to the future leaders of New York City.</h3>
+Please email [info@transalt.org](mailto:info@transalt.org) if you represent an organization which would like to join the _NYC 25x25_ Coalition.
 
 **To those running for elected office in New York City,**
 
