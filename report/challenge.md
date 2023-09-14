@@ -94,7 +94,7 @@ The City of New York faces a daunting budgetary crisis. Recovery will require a 
 
 Faced with the monumental challenges of economic recovery, mounting inequality, increasing traffic violence, climate change, and the potential for more pandemics on the horizon, it is time to make a fundamental shift in what purposes our public space serves, and ensure that the New York City of the future is built for people, not cars.
 
-![image info](https://github.com/jacobdecastro/25x25/blob/main/assets/images/report/image48.png?raw=true)
+![image info]([https://github.com/jacobdecastro/25x25/blob/main/assets/images/report/image48.png?raw=true](https://raw.githubusercontent.com/TransportationAlternatives/NYC25x25/master/assets/images/Callout%20Boxes-SF-08%202022SF%20(1).png))
 
 <div class="reportbtn d-flex justify-content-between">
 	<a href="#top" target="_self"><button type="button" class="btn btn-outline-secondary">Back to top</button></a>
