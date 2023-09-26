@@ -320,3 +320,75 @@ h3 a:hover {
 .navdesc {
 	color: #f15d22;
 }
+
+   #google_translate_element {
+  z-index: 100;
+  border-radius: 0;
+  right: 1vw;
+  left: auto;
+  position: fixed;
+  bottom: 1vh;
+}
+
+@translate-bg: rgba(255, 255, 255, 0.9) !important;
+@translate-border: black !important;
+@downicon-color:black;
+@langicon-color:#002e40;
+@translate-text-color:black;
+@translate-font:sans-serif;
+
+.goog-te-gadget-simple {
+  background-color: @translate-bg !important;
+ border-color:@translate-border !important;
+  padding: 0.2em !important;
+  border-radius: 4px !important;
+  font-size: 1rem !important;
+  line-height: 2rem !important;
+  display: inline-block;
+  cursor: pointer;
+ 
+}
+.goog-te-menu2 {
+  max-width: 100%;
+}
+.goog-te-menu-value {
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+.goog-te-menu-value:before {
+  content: "\e894";
+  margin-right: 0.5em;
+ font-family: 'Material Icons';
+ color:@langicon-color;
+}
+.goog-te-menu-value span {
+  color:@translate-text-color;
+  font-family:@translate-font;
+}
+.goog-te-menu-value span:nth-child(1) {
+  position: relative;
+  top: 0.07rem;
+}
+
+.goog-te-menu-value span:nth-child(5) {
+  display: none;
+}
+.goog-te-menu-value span:nth-child(3) {
+  border: none !important;
+  font-family: 'Material Icons';
+  display: flex;
+  
+}
+.goog-te-menu-value span:nth-child(3):after {
+  font-family: 'Material Icons';
+  content: "\E5C5";
+  font-size: 1.5rem;
+  color:@downicon-color !important;
+}
+.goog-te-gadget-icon {
+  display: none;
+}
+.goog-te-banner-frame.skiptranslate {
+  display: none!important;
+}
